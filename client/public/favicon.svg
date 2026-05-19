@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="12" fill="#0B0F1A"/>
+  <!-- Hexagon outline -->
+  <polygon points="32,4 56,18 56,46 32,60 8,46 8,18"
+    fill="none" stroke="url(#g1)" stroke-width="2.5"/>
+  <!-- CPU body -->
+  <rect x="22" y="22" width="20" height="20" rx="3"
+    fill="none" stroke="url(#g1)" stroke-width="2"/>
+  <!-- CPU core dot -->
+  <rect x="28" y="28" width="8" height="8" rx="1.5" fill="url(#g1)"/>
+  <!-- CPU pins left -->
+  <line x1="22" y1="27" x2="17" y2="27" stroke="#5DADE2" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="22" y1="32" x2="17" y2="32" stroke="#5DADE2" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="22" y1="37" x2="17" y2="37" stroke="#5DADE2" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- CPU pins right -->
+  <line x1="42" y1="27" x2="47" y2="27" stroke="#A29BFE" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="42" y1="32" x2="47" y2="32" stroke="#A29BFE" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="42" y1="37" x2="47" y2="37" stroke="#A29BFE" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- CPU pins top -->
+  <line x1="27" y1="22" x2="27" y2="17" stroke="#5DADE2" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="32" y1="22" x2="32" y2="17" stroke="#5DADE2" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="37" y1="22" x2="37" y2="17" stroke="#5DADE2" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- CPU pins bottom -->
+  <line x1="27" y1="42" x2="27" y2="47" stroke="#A29BFE" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="32" y1="42" x2="32" y2="47" stroke="#A29BFE" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="37" y1="42" x2="37" y2="47" stroke="#A29BFE" stroke-width="1.5" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5DADE2"/>
+      <stop offset="100%" stop-color="#A29BFE"/>
+    </linearGradient>
+  </defs>
+</svg>

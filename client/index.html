@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/robonixx_logo.jpeg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0B0F1A" />
+    <meta name="description" content="Robonixx — Premier IoT & Robotics Club. Building the future with intelligent machines and connected systems." />
+    <meta property="og:title" content="Robonixx - From Idea to Automation" />
+    <meta property="og:description" content="Where Innovation Meets Intelligence. Join Robonixx to explore robotics, IoT, and intelligent systems." />
+    <meta property="og:type" content="website" />
+    <title>Robonixx - From Idea to Automation</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem('robonixx_theme');
+        const theme = savedTheme === 'light' ? 'light' : 'dark';
+        document.documentElement.classList.add(theme);
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
+  </head>
+  <body class="antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-space-700;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-space-900 text-white font-body selection:bg-primary/30 selection:text-primary-light;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-space-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-space-600 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
+
+html.light body {
+  background:
+    radial-gradient(circle at top left, rgba(93, 173, 226, 0.12), transparent 24%),
+    radial-gradient(circle at top right, rgba(15, 23, 42, 0.08), transparent 26%),
+    radial-gradient(circle at bottom right, rgba(100, 116, 139, 0.14), transparent 24%),
+    linear-gradient(180deg, #eef1f4 0%, #dfe4ea 52%, #d6dbe2 100%);
+  color: #0b1120;
+}
+
+html.light #particle-canvas {
+  opacity: 0.22 !important;
+}
+
+html.light .glass {
+  background: rgba(186, 195, 207, 0.8);
+  border-color: rgba(30, 41, 59, 0.24);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.38);
+}
+
+html.light .glass-strong {
+  background: rgba(168, 178, 192, 0.9);
+  border-color: rgba(30, 41, 59, 0.28);
+  box-shadow: 0 20px 44px rgba(15, 23, 42, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+html.light .input-field {
+  background: rgba(255, 255, 255, 0.78);
+  border-color: rgba(71, 85, 105, 0.2);
+  color: #0b1120;
+}
+
+html.light .input-field::placeholder {
+  color: #64748b;
+}
+
+html.light .btn-ghost {
+  color: #334155;
+}
+
+html.light .btn-ghost:hover {
+  background-color: rgba(15, 23, 42, 0.08);
+  color: #0b1120;
+}
+
+html.light .bg-space-950,
+html.light .bg-space-900,
+html.light .bg-space-800,
+html.light .bg-space-700 {
+  background-color: #c4ccd7;
+}
+
+html.light .bg-space-950\/80,
+html.light .bg-space-950\/95,
+html.light .bg-space-900\/80,
+html.light .bg-space-900\/90,
+html.light .bg-space-900\/95,
+html.light .bg-space-800\/50,
+html.light .bg-space-800\/60,
+html.light .bg-space-800\/80 {
+  background-color: rgba(177, 188, 202, 0.86);
+}
+
+html.light .border-white\/5,
+html.light .border-white\/10,
+html.light .border-white\/\[0\.08\] {
+  border-color: rgba(51, 65, 85, 0.2);
+}
+
+html.light .text-white {
+  color: #020617;
+}
+
+html.light .text-white\/10 {
+  color: rgba(2, 6, 23, 0.12);
+}
+
+html.light .text-slate-300 {
+  color: #1e293b;
+}
+
+html.light .text-slate-400 {
+  color: #334155;
+}
+
+html.light .text-slate-500,
+html.light .text-slate-600 {
+  color: #475569;
+}
+
+html.light .hover\:text-white:hover,
+html.light .group:hover .group-hover\:text-white {
+  color: #020617;
+}
+
+html.light .hover\:bg-white\/5:hover {
+  background-color: rgba(15, 23, 42, 0.1);
+}
+
+html.light .bg-white\/5 {
+  background-color: rgba(15, 23, 42, 0.12);
+}
+
+html.light .bg-white\/10 {
+  background-color: rgba(15, 23, 42, 0.16);
+}
+
+html.light .shadow-card,
+html.light .shadow-glass,
+html.light .shadow-glow-sm {
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.14);
+}
+
+html.light .grid-bg {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+}
+
+@layer components {
+  /* Glass card effect */
+  .glass {
+    @apply bg-space-800/60 backdrop-blur-md border border-white/5 shadow-glass;
+  }
+  .glass-strong {
+    @apply bg-space-800/80 backdrop-blur-xl border border-white/[0.08] shadow-glass;
+  }
+
+  /* Glow border */
+  .glow-border-blue {
+    @apply border border-primary/30 shadow-glow-sm;
+  }
+  .glow-border-violet {
+    @apply border border-accent/30 shadow-glow-violet;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+  }
+  .gradient-text-blue {
+    @apply bg-gradient-to-r from-primary-light to-primary bg-clip-text text-transparent;
+  }
+
+  /* Circuit node dot */
+  .circuit-dot {
+    @apply w-2 h-2 rounded-full bg-primary animate-pulse-slow;
+  }
+
+  /* Futuristic button */
+  .btn-primary {
+    @apply relative inline-flex items-center gap-2 px-6 py-3 font-display text-sm font-medium text-space-900 
+           bg-gradient-to-r from-primary to-accent rounded-lg overflow-hidden
+           transition-all duration-300 hover:scale-105 hover:shadow-glow-blue
+           active:scale-95;
+  }
+  .btn-outline {
+    @apply relative inline-flex items-center gap-2 px-6 py-3 font-display text-sm font-medium text-primary
+           border border-primary/40 rounded-lg overflow-hidden
+           transition-all duration-300 hover:bg-primary/10 hover:border-primary hover:shadow-glow-sm
+           active:scale-95;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 text-sm text-slate-300 
+           rounded-lg transition-all duration-200 hover:bg-white/5 hover:text-white;
+  }
+
+  /* Tag pill */
+  .tag {
+    @apply inline-flex items-center px-3 py-1 text-xs font-mono text-primary 
+           bg-primary/10 border border-primary/20 rounded-full;
+  }
+
+  /* Section container */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Grid background */
+  .grid-bg {
+    background-image: linear-gradient(rgba(93,173,226,0.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(93,173,226,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Neon line */
+  .neon-line {
+    @apply h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent;
+  }
+
+  /* Input styles */
+  .input-field {
+    @apply w-full px-4 py-3 bg-space-800/80 border border-white/10 rounded-lg text-white
+           placeholder-slate-500 font-body text-sm
+           focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20
+           transition-all duration-200;
+  }
+
+  /* Card hover lift */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-glow-sm;
+  }
+
+  /* Status badges */
+  .badge-upcoming {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium text-emerald-400 
+           bg-emerald-400/10 border border-emerald-400/20 rounded-full;
+  }
+  .badge-past {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium text-slate-400 
+           bg-slate-400/10 border border-slate-400/20 rounded-full;
+  }
+  .badge-ongoing {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium text-amber-400 
+           bg-amber-400/10 border border-amber-400/20 rounded-full;
+  }
+}
+
+/* Particle canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Loading shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(31, 42, 68, 0.4) 0%,
+    rgba(93, 173, 226, 0.1) 50%,
+    rgba(31, 42, 68, 0.4) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+/* Holographic effect */
+.holographic {
+  background: linear-gradient(
+    135deg,
+    rgba(93, 173, 226, 0.1) 0%,
+    rgba(162, 155, 254, 0.1) 50%,
+    rgba(93, 173, 226, 0.1) 100%
+  );
+  border: 1px solid rgba(93, 173, 226, 0.2);
+}
+
+/* Circuit path animation */
+.circuit-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: circuitDraw 3s linear forwards;
+}
+@keyframes circuitDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Typing cursor */
+.typing-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+  color: #5DADE2;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Meteor shower */
+.meteor {
+  position: absolute;
+  width: 1px;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(93,173,226,0.8), transparent);
+  transform: rotate(215deg);
+  animation: meteor 4s linear infinite;
+}
+
+/* Hex grid pattern */
+.hex-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%235DADE2' fill-opacity='0.03'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  .mobile-menu-open {
+    @apply overflow-hidden;
+  }
+}
