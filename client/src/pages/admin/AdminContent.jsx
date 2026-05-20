@@ -17,20 +17,20 @@ function Field({ label, children }) {
 
 const DEFAULT_FACULTY_MEMBERS = [
   {
-    name: 'Dr. Priya Sharma',
-    designation: 'Head of Department, Electronics & Communication',
+    name: 'Mr. S.K. Abdul Rahim',
+    designation: 'President , Robonixx',
     description: 'Guiding Robonixx with wisdom and vision, enabling students to achieve excellence in technology and innovation.',
     image: '',
   },
   {
-    name: 'Faculty Coordinator',
-    designation: 'Robonixx Faculty Coordinator',
+    name: 'Mr. Mintu Ghosh',
+    designation: 'Vice-President , Robonixx',
     description: 'Supports club operations, event planning, and student coordination throughout the academic year.',
     image: '',
   },
   {
-    name: 'Technical Mentor',
-    designation: 'Project and Workshop Mentor',
+    name: 'Mr. Swarup Kr Hazra Choudhary',
+    designation: 'Convenor , Robonixx',
     description: 'Guides members during build sessions, bootcamps, and interdisciplinary project development.',
     image: '',
   },
@@ -58,7 +58,7 @@ const MAX_IMAGE_SIZE_MB = 15;
 
 export default function AdminContent() {
   const [content, setContent] = useState({
-    tagline: '', motto: '', about: '', foundationYear: 2019,
+    tagline: '', motto: '', about: '', foundationYear: 2015,
     hodName: '', hodDesignation: '', hodImage: '',
     facultyMembers: DEFAULT_FACULTY_MEMBERS,
     currentLeaders: DEFAULT_CURRENT_LEADERS,

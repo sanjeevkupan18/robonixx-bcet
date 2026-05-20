@@ -32,9 +32,31 @@ const allowedOrigins = [
   'http://localhost:3000',
 ].filter(Boolean);
 
+const originMatchesPattern = (origin, pattern) => {
+  if (!pattern.includes('*')) return false;
+
+  try {
+    const originUrl = new URL(origin);
+    const patternUrl = new URL(pattern.replace('*.', 'placeholder.'));
+
+    if (originUrl.protocol !== patternUrl.protocol) return false;
+
+    const expectedSuffix = patternUrl.hostname.replace('placeholder.', '.');
+    return originUrl.hostname.endsWith(expectedSuffix);
+  } catch {
+    return false;
+  }
+};
+
+const isAllowedOrigin = (origin) =>
+  allowedOrigins.some((allowedOrigin) =>
+    allowedOrigin === origin || originMatchesPattern(origin, allowedOrigin)
+  );
+
 app.use(cors({
   origin: (origin, cb) => {
-    if (!origin || allowedOrigins.includes(origin)) return cb(null, true);
+    if (!origin || isAllowedOrigin(origin)) return cb(null, true);
+    console.error(`[CORS] Rejected origin: ${origin}`);
     cb(new Error('Not allowed by CORS'));
   },
   credentials: true,
