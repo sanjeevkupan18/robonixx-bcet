@@ -39,7 +39,7 @@ const STATS = [
   { icon: Trophy, label: 'Events Hosted', value: 30, suffix: '+' },
   { icon: Users, label: 'Active Members', value: 80, suffix: '+' },
   { icon: Zap, label: 'Projects Built', value: 25, suffix: '+' },
-  { icon: Globe, label: 'Years Active', value: 1, suffix: '' },
+  { icon: Globe, label: 'Years Active', value: 4, suffix: '' },
 ];
 
 const OFFERINGS = [
@@ -169,8 +169,8 @@ export default function Home() {
 
   const tagline = siteContent?.tagline || 'Where Innovation Meets Intelligence';
   const motto = siteContent?.motto || 'Build. Learn. Innovate.';
-  const hodName = siteContent?.hodName || 'Dr. Priya Sharma';
-  const hodDesignation = siteContent?.hodDesignation || 'Head of Department';
+  const hodName = siteContent?.hodName || 'Mr. S.K. Abdul Rahim';
+  const hodDesignation = siteContent?.hodDesignation || 'Head of Club';
   const aboutText = siteContent?.about || 'Robonixx is a premier IoT & Robotics club that empowers students to explore, create, and lead in the world of intelligent machines and connected systems.';
   const aboutSnippet = aboutText.length > 210 ? `${aboutText.slice(0, 210).trimEnd()}...` : aboutText;
   const latestEventDescription = latestEvent
@@ -528,7 +528,7 @@ export default function Home() {
                   </p>
                   <div className="grid grid-cols-2 gap-3 mb-8">
                     {[
-                      `Founded ${siteContent?.foundationYear || 2019}`,
+                      `Founded ${siteContent?.foundationYear || 2015}`,
                       'IoT and robotics focus',
                       'Student-led community',
                       'Workshops and projects',
