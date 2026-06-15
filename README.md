@@ -147,12 +147,7 @@ CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USER=your_email@gmail.com
-EMAIL_PASS=your_gmail_app_password
-EMAIL_FROM=Robonixx Club <your_email@gmail.com>
-ADMIN_EMAIL=admin@robonixx.com
+
 
 CLIENT_URL=http://localhost:5173
 
@@ -184,11 +179,7 @@ npm run server    # Backend on http://localhost:5000
 npm run client    # Frontend on http://localhost:5173
 ```
 
-### 5. Access Admin Panel
-Navigate to `http://localhost:5173/admin/login`  
-Default credentials (from seed):
-- **Email:** `admin@robonixx.com`  
-- **Password:** `Robonixx@Admin123`
+
 
 > ⚠️ Change the password after first login!
 
@@ -320,12 +311,7 @@ CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USER=robonix.bcet@gmail.com
-EMAIL_PASS=your_google_app_password
-EMAIL_FROM=Robonixx Club <robonix.bcet@gmail.com>
-ADMIN_EMAIL=robonix.bcet@gmail.com
+
 
 CLIENT_URL=https://your-frontend.vercel.app
 CLIENT_URLS=https://your-frontend.vercel.app,https://your-custom-domain.com
@@ -497,5 +483,5 @@ CLIENT_URLS=https://www.yourdomain.com,https://yourdomain.com
 ---
 
 ## 📝 License
-MIT — Built with ❤️ for Robonixx Club
+SanjuCoding — Built with ❤️ for Robonixx Club
 # Robonixx-Website
