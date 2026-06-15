@@ -147,12 +147,7 @@ CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USER=your_email@gmail.com
-EMAIL_PASS=your_gmail_app_password
-EMAIL_FROM=Robonixx Club <your_email@gmail.com>
-ADMIN_EMAIL=admin@robonixx.com
+
 
 CLIENT_URL=http://localhost:5173
 
