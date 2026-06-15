@@ -184,11 +184,7 @@ npm run server    # Backend on http://localhost:5000
 npm run client    # Frontend on http://localhost:5173
 ```
 
-### 5. Access Admin Panel
-Navigate to `http://localhost:5173/admin/login`  
-Default credentials (from seed):
-- **Email:** `admin@robonixx.com`  
-- **Password:** `Robonixx@Admin123`
+
 
 > ⚠️ Change the password after first login!
 
