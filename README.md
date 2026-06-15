@@ -483,5 +483,5 @@ CLIENT_URLS=https://www.yourdomain.com,https://yourdomain.com
 ---
 
 ## 📝 License
-MIT — Built with ❤️ for Robonixx Club
+SanjuCoding — Built with ❤️ for Robonixx Club
 # Robonixx-Website
