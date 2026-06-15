@@ -167,7 +167,7 @@ export default function Home() {
     setActiveAboutSlide((current) => (current >= aboutSlides.length ? 0 : current));
   }, [aboutSlides.length]);
 
-  const tagline = siteContent?.tagline || 'Where Innovation Meets Intelligence';
+  const tagline = siteContent?.tagline || 'From Idea to Automation';
   const motto = siteContent?.motto || 'Build. Learn. Innovate.';
   const hodName = siteContent?.hodName || 'Mr. S.K. Abdul Rahim';
   const hodDesignation = siteContent?.hodDesignation || 'Head of Club';

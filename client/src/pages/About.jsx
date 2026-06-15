@@ -20,33 +20,33 @@ const SHARED_PROFILE_IMAGE = 'data:image/svg+xml,%3Csvg xmlns%3D%22http%3A//www.
 
 const DEFAULT_FACULTY_MEMBERS = [
   {
-    name: 'Dr. Priya Sharma',
-    designation: 'Head of Department',
+    name: 'Mr. S.K. Abdul Rahim',
+    designation: 'President , Robonixx',
     description: 'Guiding Robonixx with wisdom and vision, enabling students to achieve excellence in technology and innovation.',
     image: '',
   },
   {
-    name: 'Faculty Coordinator',
-    designation: 'Robonixx Faculty Coordinator',
+    name: 'Mr. Mintu Ghosh',
+    designation: 'Vice President , Robonixx',
     description: 'Supports club operations, event planning, and student coordination throughout the academic year.',
     image: '',
   },
   {
-    name: 'Technical Mentor',
-    designation: 'Project and Workshop Mentor',
+    name: 'Mr. Swarup Kr Hazra Choudhary',
+    designation: 'Convenor , Robonixx',
     description: 'Guides members during build sessions, bootcamps, and interdisciplinary project development.',
     image: '',
   },
 ];
 
 const DEFAULT_CURRENT_LEADERS = [
-  { name: 'Leader 01', branch: 'ECE', position: 'President', image: '' },
-  { name: 'Leader 02', branch: 'CSE', position: 'Vice President', image: '' },
-  { name: 'Leader 03', branch: 'EEE', position: 'Technical Lead', image: '' },
-  { name: 'Leader 04', branch: 'ECE', position: 'Secretary', image: '' },
-  { name: 'Leader 05', branch: 'ME', position: 'Event Head', image: '' },
-  { name: 'Leader 06', branch: 'CSE', position: 'Media Head', image: '' },
-  { name: 'Leader 07', branch: 'ECE', position: 'Operations Lead', image: '' },
+  { name: 'Ayush Kumar', branch: 'IT', position: 'SCO', image: '' },
+  { name: 'Dangsa Molshim Maring', branch: 'IT', position: 'Joint SCO', image: '' },
+  { name: 'Sanjeevan Nag', branch: 'IT', position: 'Event Management Head', image: '' },
+  { name: 'Ayush Kushwaha', branch: 'IT', position: 'Technical Team Head', image: '' },
+  { name: 'Faiz Ahmad', branch: 'CSE', position: 'Technical Team Head', image: '' },
+  { name: 'Shruti Pandey', branch: 'CSE', position: 'PR Head', image: '' },
+  { name: 'Shubham Singh', branch: 'CSE', position: 'PR Lead', image: '' },
 ];
 
 const FOUNDER = {
@@ -152,10 +152,10 @@ export default function About() {
             ) : (
               <>
                 <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                  <span className="tag mb-4 inline-block">Since {content?.foundationYear || 2019}</span>
+                  <span className="tag mb-4 inline-block">Since {content?.foundationYear || 2007}</span>
                   <h2 className="font-display font-bold text-2xl md:text-3xl mb-4 gradient-text">Our Mission</h2>
                   <p className="text-slate-400 leading-relaxed mb-6 text-sm">
-                    Founded in {content?.foundationYear || 2019}, Robonixx was born from a simple belief — that students learn best by building. We create an environment where curiosity meets hardware, and ideas become tangible solutions.
+                    Founded in {content?.foundationYear || 2007}, Robonixx was born from a simple belief — that students learn best by building. We create an environment where curiosity meets hardware, and ideas become tangible solutions.
                   </p>
                   <div className="space-y-3">
                     {['Hands-on IoT & Robotics workshops', 'Industry expert sessions & bootcamps', 'Competitive hackathons & project expos', 'Open innovation lab access'].map((item) => (
