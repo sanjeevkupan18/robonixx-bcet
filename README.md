@@ -316,12 +316,12 @@ CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 
-EMAIL_HOST=smtp.gmail.com
+<!-- EMAIL_HOST=smtp.gmail.com
 EMAIL_PORT=587
 EMAIL_USER=robonix.bcet@gmail.com
 EMAIL_PASS=your_google_app_password
 EMAIL_FROM=Robonixx Club <robonix.bcet@gmail.com>
-ADMIN_EMAIL=robonix.bcet@gmail.com
+ADMIN_EMAIL=robonix.bcet@gmail.com -->
 
 CLIENT_URL=https://your-frontend.vercel.app
 CLIENT_URLS=https://your-frontend.vercel.app,https://your-custom-domain.com
